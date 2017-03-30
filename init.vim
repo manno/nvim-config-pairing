@@ -1,5 +1,4 @@
 " ----- Colors
-colorscheme default
 set mouse=ivh
 
 "----- Setup tabs, use spaces instead of tabs
@@ -275,6 +274,37 @@ augroup END
 
 " Vim Rooter
 let g:rooter_patterns = [ 'package.json', 'README.md', 'Rakefile', '.git', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/' ]
+
+" ----- Filetype Specific Settings
+"
+"autocmd FileType csv          set nofoldenable
+"autocmd FileType xml          let g:xml_syntax_folding = 1
+autocmd FileType c            set omnifunc=ccomplete#Complete ts=2 sw=2 cindent
+autocmd FileType css          set omnifunc=csscomplete#CompleteCSS
+autocmd FileType eruby        map _rw i<%= %>
+autocmd FileType eruby        set ts=2 sw=2
+autocmd FileType go           map <F4> :GoImports<CR>
+autocmd FileType go           setlocal noet ts=8 sw=8 sts=8
+autocmd FileType html         set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType java         set foldmethod=manual
+autocmd FileType javascript   set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType lua          set ts=4 sw=4 et smartindent foldmethod=syntax
+autocmd FileType nfo          edit ++enc=cp437
+autocmd FileType perl         source $HOME/.config/nvim/config/filetype_perl.vim
+autocmd FileType php          set omnifunc=phpcomplete#CompletePHP
+autocmd FileType plaintex     source $HOME/.config/nvim/config/filetype_tex.vim
+autocmd FileType python       set omnifunc=pythoncomplete#Complete
+autocmd FileType ruby         source $HOME/.config/nvim/config/filetype_ruby.vim
+autocmd FileType ruby,eruby   let g:rubycomplete_buffer_loading = 1
+autocmd FileType ruby,eruby   let g:rubycomplete_classes_in_global = 1
+autocmd FileType ruby,eruby   let g:rubycomplete_rails = 1
+autocmd FileType vim          set ts=4 sw=4
+autocmd FileType xml          set omnifunc=xmlcomplete#CompleteTags ts=4 sw=4
+autocmd FileType xwt          set ts=2 sw=2 foldmethod=syntax
+autocmd FileType zsh          set ts=4 sw=4 et
+
+" strip trailing whitespace
+autocmd FileType vim,ruby,yaml,haml,css,html,eruby,coffee,javascript,markdown,sh autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 " ----- Colorschemes
 colorscheme github
