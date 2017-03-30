@@ -7,7 +7,6 @@ autocmd FileType c        set omnifunc=ccomplete#Complete
 autocmd FileType css      set omnifunc=csscomplete#CompleteCSS
 autocmd FileType eruby    set ts=2 sw=2
 autocmd FileType eruby    map _rw i<%= %>
-autocmd FileType es6      setf javascript
 autocmd FileType go       setlocal noet ts=8 sw=8 sts=8
 autocmd FileType go       map <F4> :GoImports<CR>
 autocmd FileType html     set omnifunc=htmlcomplete#CompleteTags
@@ -59,6 +58,7 @@ augroup filetypedetect
     au! BufRead,BufNewFile *.nfo      setf nfo
     " -----  eruby/rails/erb
     au! BufRead *.rhtml               setf eruby
+    au! BufRead *.es6                 setf javascript
     au! BufRead *.erb                 setf eruby
     au! BufRead *.jbuilder            setf ruby
     au! BufRead *.coffee              setf coffee

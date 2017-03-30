@@ -13,12 +13,10 @@ set autowrite         " Writes on make/shell commands
 
 "----- speed
 set synmaxcol=256
-set lazyredraw        " to avoid scrolling problems
+"set lazyredraw        " to avoid scrolling problems
 
 "----- Setup document specifics
 filetype on                       " Enable filetype detection
-filetype indent on                " Enable filetype-specific indenting
-filetype plugin on                " Enable filetype-specific plugins
 set hidden                        " Allow hidden buffers
 set noinsertmode                  " Don't don't out in insert mode
 set backspace=indent,eol,start    " Allow us to backspace before an insert
@@ -76,6 +74,7 @@ function WordProcessor(enable)
   endif
 endfunction
 
+" German spelling
 map <F8>        :setlocal spell spelllang=de_20,de,en<CR>:call WordProcessor(1)<CR>
 map <s-F8>      :setlocal spell spelllang=en<CR>:call WordProcessor(1)<CR>
 map <esc><F8>   :setlocal nospell<CR>:call WordProcessor(0)<CR>
@@ -185,10 +184,10 @@ Plug 'benekastah/neomake'
 
 " Colorschemes
 Plug 'jonathanfilip/vim-lucius'
-Plug 'tomasr/molokai'
-Plug 'noahfrederick/vim-hemisu'
+"Plug 'tomasr/molokai'
+"Plug 'noahfrederick/vim-hemisu'
 Plug 'endel/vim-github-colorscheme'
-Plug 'chriskempson/vim-tomorrow-theme'
+"Plug 'chriskempson/vim-tomorrow-theme'
 
 " Ctags support
 Plug 'szw/vim-tags'
