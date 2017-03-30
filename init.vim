@@ -1,5 +1,4 @@
 " ----- Colors
-syntax enable
 colorscheme default
 set mouse=ivh
 
@@ -17,31 +16,23 @@ set synmaxcol=256
 set lazyredraw        " to avoid scrolling problems
 
 "----- Setup document specifics
-set autoindent
 filetype on                       " Enable filetype detection
 filetype indent on                " Enable filetype-specific indenting
 filetype plugin on                " Enable filetype-specific plugins
 set hidden                        " Allow hidden buffers
 set noinsertmode                  " Don't don't out in insert mode
 set backspace=indent,eol,start    " Allow us to backspace before an insert
-set wildmenu
 set wildignore+=*.o,*.obj,.svn,.git,tags
 
 " Jump to the last position when reopening a file
-if has("autocmd")
-  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-    \| exe "normal g'\"" | endif
-endif
+au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+            \| exe "normal g'\"" | endif
 
 "----- Backups & Files
-set backup                   " Enable creation of backup file.
-set backupdir=~/.local/share/nvim/backup " Where backups will go.
-set undodir=~/.local/share/vim/undo " Where backups will go.
-if has('persistent_undo')
-    set undofile                " So is persistent undo ...
-    set undolevels=1000         " Maximum number of changes that can be undone
-    set undoreload=10000        " Maximum number lines to save for undo on a buffer reload
-endif
+set backup                  " Enable creation of backup file.
+set undofile                " So is persistent undo ...
+set undolevels=1000         " Maximum number of changes that can be undone
+set undoreload=10000        " Maximum number lines to save for undo on a buffer reload
 
 augroup NoSimultaneousEdits
     autocmd!
@@ -51,15 +42,11 @@ augroup END
 "----- Search
 set ignorecase
 set smartcase
-set incsearch               " Show `best match so far' as typed
-set hlsearch                " Keep highlight until :noh
 
 "----- Encoding
 set nodigraph               " Disable digraphs for uumlauts
-if has("multi_byte")        " Vim tip 245
-     set fileencodings=utf-8,iso-8859-15,ucs-bom    " heuristic
-     set virtualedit=block  " Fix problem with yank in utf8
-endif
+set fileencodings=utf-8,iso-8859-15,ucs-bom    " heuristic
+set virtualedit=block  " Fix problem with yank in utf8
 
 "----- Diffmode
 if &diff
@@ -69,7 +56,6 @@ if &diff
 endif
 
 "----- Statusline
-set laststatus=2
 set ruler
 set showcmd                 " show the command in the status line
 
