@@ -11,7 +11,7 @@ set cf                " Enable error files & error jumping.
 set autowrite         " Writes on make/shell commands
 
 "----- speed
-set synmaxcol=256
+set synmaxcol=512
 "set lazyredraw        " to avoid scrolling problems
 
 "----- Setup document specifics
@@ -27,6 +27,10 @@ au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
 
 "----- Backups & Files
 set backup                  " Enable creation of backup file.
+if empty(glob('~/.local/share/nvim/backup'))
+    call mkdir($HOME . "/.local/share/nvim/backup", "p", 0700)
+endif
+set backupdir=~/.local/share/nvim/backup " Where backups will go.
 set undofile                " So is persistent undo ...
 set undolevels=1000         " Maximum number of changes that can be undone
 set undoreload=10000        " Maximum number lines to save for undo on a buffer reload
@@ -89,12 +93,6 @@ set pastetoggle=<F5>
 nnoremap <C-n>   :bn<CR>
 nnoremap <C-p>   :bp<CR>
 
-" Navigate windows / splits
-nnoremap <C-Down>  <C-W>j
-nnoremap <C-Up>    <C-W>k
-nnoremap <C-Left>  <C-W>h
-nnoremap <C-Right> <C-W>l
-
 " Quit all buffers - qa/wa
 command! Q      :quitall
 
@@ -147,6 +145,7 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+  " FIXME python setup? pip install python-neovim
 endif
 call plug#begin('~/.config/nvim/plugged')
 
@@ -284,7 +283,7 @@ autocmd FileType css          set omnifunc=csscomplete#CompleteCSS
 autocmd FileType eruby        map _rw i<%= %>
 autocmd FileType eruby        set ts=2 sw=2
 autocmd FileType go           map <F4> :GoImports<CR>
-autocmd FileType go           setlocal noet ts=8 sw=8 sts=8
+autocmd FileType go           setlocal noet ts=8 sw=8 sts=8 number
 autocmd FileType html         set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType java         set foldmethod=manual
 autocmd FileType javascript   set omnifunc=javascriptcomplete#CompleteJS
