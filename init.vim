@@ -284,7 +284,7 @@ let g:rooter_patterns = [ 'package.json', 'README.md', 'Rakefile', '.git', '.git
 autocmd FileType c            set omnifunc=ccomplete#Complete ts=2 sw=2 cindent
 autocmd FileType css          set omnifunc=csscomplete#CompleteCSS
 autocmd FileType eruby        map _rw i<%= %>
-autocmd FileType eruby        set ts=2 sw=2
+autocmd FileType eruby        set ts=2 sw=2 number
 autocmd FileType go           map <F4> :GoImports<CR>
 autocmd FileType go           setlocal noet ts=8 sw=8 sts=8 number
 autocmd FileType html         set omnifunc=htmlcomplete#CompleteTags
