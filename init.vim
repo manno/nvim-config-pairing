@@ -86,6 +86,9 @@ set thesaurus+=~/.config/nvim/spell/thesaurus.txt
 
 " ----- Keys / Mappings / Commands
 "
+" Change map leader, default is \
+"let mapleader = ","
+
 " Famous paste toggle for xterm vim
 set pastetoggle=<F5>
 
@@ -97,7 +100,7 @@ nnoremap <C-p>   :bp<CR>
 command! Q      :quitall
 
 " Close current buffer
-map <M-w>        <ESC>:bw<CR>
+map <leader>w       <ESC>:bw<CR>
 
 " Debug
 map   <F6>      :command
@@ -109,18 +112,18 @@ map !ma       <ESC>:w<CR>:make<CR>
 let @t = ":pop"
 
 " Search
-map \g     :Ggrep <C-R><C-W><CR>
+map <leader>g     :Ggrep <C-R><C-W><CR>
 
 " ----- Mousewheel in Xterm
 "
-map <M-Esc>[62~ <MouseDown>
-map! <M-Esc>[62~ <MouseDown>
-map <M-Esc>[63~ <MouseUp>
-map! <M-Esc>[63~ <MouseUp>
-map <M-Esc>[64~ <S-MouseDown>
-map! <M-Esc>[64~ <S-MouseDown>
-map <M-Esc>[65~ <S-MouseUp>
-map! <M-Esc>[65~ <S-MouseUp>
+" map <M-Esc>[62~ <MouseDown>
+" map! <M-Esc>[62~ <MouseDown>
+" map <M-Esc>[63~ <MouseUp>
+" map! <M-Esc>[63~ <MouseUp>
+" map <M-Esc>[64~ <S-MouseDown>
+" map! <M-Esc>[64~ <S-MouseDown>
+" map <M-Esc>[65~ <S-MouseUp>
+" map! <M-Esc>[65~ <S-MouseUp>
 
 " Forgot to open as root?
 command! Wsudo  :w !sudo tee > /dev/null %
@@ -242,7 +245,7 @@ call plug#end()
 
 " fzf
 map <C-t> :GitFiles<CR>
-map <M-b> :Buffers<CR>
+map <leader>b :Buffers<CR>
 
 " vim-test
 nmap <F3> :TestFile<CR>

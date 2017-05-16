@@ -2,10 +2,10 @@
 set foldmethod=manual
 set ts=2 sw=2
 "-----------------------------------------------------------
-" RUBY MACROS 
+" RUBY MACROS
 "
-"@c      ruby class
-let @c = "vecclass \<ESC>po\<CR>def initialize\<CR>end\<CR>end\<CR>\<ESC>"
+"_c      ruby class
+let _c = "vecclass \<ESC>po\<CR>def initialize\<CR>end\<CR>end\<CR>\<ESC>"
 
 " Ruby MAPS
 " Quick insert - simple ruby header

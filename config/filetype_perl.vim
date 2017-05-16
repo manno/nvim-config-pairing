@@ -8,22 +8,22 @@ let perl_include_pod=1
 let perl_fold=1
 
 "-----------------------------------------------------------
-" PERL MACROS 
+" PERL MACROS
 "
 ""set perl_fold=1
 
-"@m      perl class member method 
-let @m = "vec=head2 \<ESC>po\<CR>\<CR>=cut \<ESC>osub  \<ESC>PA{\<CR>my $self=shift;\<ESC>"
-"@n      perl method method 
-let @n = "vec=head3  \<ESC>po\<CR>\<CR>=cut \<ESC>osub  \<ESC>PA{\<CR>\<ESC>"
-"@g     perl getwidget
-"let @g = "vecmy $\<ESC>pA = $glade->get_widget('\<ESC>pA');\<ESC>"
-let @g = "vec$widget->{\<ESC>pA} = $glade->get_widget('\<ESC>pA');\<ESC>"
-"@w     perl Template.pm Tags
-" let @w = "i[% \<ESC>lwi %]\<ESC>"
-"@k     klammer
-let @k = "i(\<ESC>lwi)\<ESC>"
-let @b = "i{\<ESC>lwi}\<ESC>"
+"_m      perl class member method
+let _m = "vec=head2 \<ESC>po\<CR>\<CR>=cut \<ESC>osub  \<ESC>PA{\<CR>my $self=shift;\<ESC>"
+"_n      perl method method
+let _n = "vec=head3  \<ESC>po\<CR>\<CR>=cut \<ESC>osub  \<ESC>PA{\<CR>\<ESC>"
+"_g     perl getwidget
+"let _g = "vecmy $\<ESC>pA = $glade->get_widget('\<ESC>pA');\<ESC>"
+let _g = "vec$widget->{\<ESC>pA} = $glade->get_widget('\<ESC>pA');\<ESC>"
+"_w     perl Template.pm Tags
+" let _w = "i[% \<ESC>lwi %]\<ESC>"
+"_k     klammer
+let _k = "i(\<ESC>lwi)\<ESC>"
+let _b = "i{\<ESC>lwi}\<ESC>"
 
 " PERL MAPS
 " quick insert - simple perl header

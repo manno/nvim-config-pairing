@@ -25,7 +25,7 @@ vmap  _id        "zdi\begin{description}<CR>\item[] <C-R>z\end{description}<CR><
 map   _ii        i\begin{itemize}<CR>\item<CR>\end{itemize}<CR><ESC>
 "vmap  _ii        "zdi\begin{itemize}<CR>\item <C-R>z\end{itemize}<CR><ESC>
 "damn hax
-vmap  _ii        "zd:let @z = substitute (@z, "\n", "\n\\\\item ", "g")<CR>i\begin{itemize}<CR>\item <C-R>z\end{itemize}<CR><ESC> 
+vmap  _ii        "zd:let @z = substitute (@z, "\n", "\n\\\\item ", "g")<CR>i\begin{itemize}<CR>\item <C-R>z\end{itemize}<CR><ESC>
 vmap  _ie        "zdi\begin{enumerate}<CR>\item[1] <C-R>z\end{enumerate}<CR><ESC>
 vmap  _iv        "zdi\begin{verbatim}<C-R>z\end{verbatim}<ESC>
 vmap  _iq        "zdi\begin{quote}<CR>"`<C-R>z"'<CR>\end{quote}\vfill<ESC>
