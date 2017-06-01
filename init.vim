@@ -245,6 +245,7 @@ call plug#end()
 
 " fzf
 map <C-t> :GitFiles<CR>
+map <leader>t :GitFiles<CR>
 map <leader>b :Buffers<CR>
 
 " vim-test
