@@ -153,7 +153,7 @@ endif
 call plug#begin('~/.config/nvim/plugged')
 
 " Nerd
-Plug 'The-NERD-Commenter'
+Plug 'vim-scripts/The-NERD-Commenter'
 
 " Grep
 "Plug 'vim-scripts/grep.vim'
@@ -163,7 +163,7 @@ Plug 'manno/grep'
 "Plug 'rking/ag.vim'
 
 " Status line
-Plug 'vim-airline'
+Plug 'vim-scripts/vim-airline'
 
 " Open files
 "Plug 'Shougo/unite.vim'
@@ -177,7 +177,7 @@ Plug 'junegunn/fzf.vim'
 function! DoRemote(arg)
   UpdateRemotePlugins
 endfunction
-Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+"Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 
 " Syntax errors
 "Plug 'scrooloose/syntastic'
@@ -233,7 +233,7 @@ Plug 'mitsuhiko/vim-python-combined', { 'for': 'python' }
 Plug 'vim-scripts/R.vim', { 'for': 'r' }
 
 " Git
-Plug 'fugitive.vim'
+Plug 'vim-scripts/fugitive.vim'
 
 " Latexsuite = vim-latex
 Plug 'vim-latex/vim-latex', { 'for': 'tex' }
