@@ -169,7 +169,7 @@ Plug 'vim-scripts/vim-airline'
 "Plug 'Shougo/unite.vim'
 "Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 "Plug 'ctrlpvim/ctrlp.vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 
 "Plug 'Shougo/neocomplete.vim'
@@ -260,6 +260,7 @@ let g:deoplete#enable_at_startup = 1
 
 " fugitive git grep
 autocmd QuickFixCmdPost *grep* cwindow
+set diffopt+=vertical
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
