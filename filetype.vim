@@ -30,4 +30,5 @@ augroup filetypedetect
     au! BufRead,BufNewFile *.txt          setf text
     au! BufWritePost *.go                 Neomake
     au! BufWritePost *.js                 Neomake
+    au! BufWritePost *.go                 GoImports
 augroup END
