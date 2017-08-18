@@ -174,10 +174,12 @@ Plug 'junegunn/fzf.vim'
 
 "Plug 'Shougo/neocomplete.vim'
 "Plug 'Shougo/neocomplcache.vim'
-function! DoRemote(arg)
-  UpdateRemotePlugins
-endfunction
-"Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+" function! DoRemote(arg)
+"   UpdateRemotePlugins
+" endfunction
+" Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+
+Plug 'roxma/nvim-completion-manager', { 'do': 'pip3 install --user neovim jedi mistune psutil setproctitle' }
 
 " Syntax errors
 "Plug 'scrooloose/syntastic'
