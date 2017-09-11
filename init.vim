@@ -15,7 +15,7 @@ set synmaxcol=512
 "set lazyredraw        " to avoid scrolling problems
 
 "----- Setup document specifics
-filetype on                       " Enable filetype detection
+filetype on                       " Load filetype.vim
 set hidden                        " Allow hidden buffers
 set noinsertmode                  " Don't don't out in insert mode
 set backspace=indent,eol,start    " Allow us to backspace before an insert
@@ -180,6 +180,7 @@ Plug 'junegunn/fzf.vim'
 " Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 
 Plug 'roxma/nvim-completion-manager', { 'do': 'pip3 install --user neovim jedi mistune psutil setproctitle' }
+Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 
 " Syntax errors
 "Plug 'scrooloose/syntastic'
