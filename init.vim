@@ -96,6 +96,10 @@ set pastetoggle=<F5>
 nnoremap <C-n>   :bn<CR>
 nnoremap <C-p>   :bp<CR>
 
+" Tab next
+nnoremap <leader>n   :tabnext<CR>
+nnoremap <leader>p   :tabprev<CR>
+
 " Quit all buffers - qa/wa
 command! Q      :quitall
 
