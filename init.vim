@@ -9,6 +9,7 @@ set tabstop=2
 set expandtab
 set cf                " Enable error files & error jumping.
 set autowrite         " Writes on make/shell commands
+set number            " Show line numbers
 
 "----- speed
 set synmaxcol=512
