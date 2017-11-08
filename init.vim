@@ -65,7 +65,7 @@ set showcmd                 " show the command in the status line
 " Rechtschreibung & Word Processing: move cursor in editor lines, not text lines
 " change to utf8 umlaut compatible mode with digraphs
 " http://vim.wikia.com/wiki/VimTip38
-function WordProcessor(enable)
+function! WordProcessor(enable)
   if a:enable
     echo "WordProcessor Mode: enabled"
     imap <Up> <C-O>gk
