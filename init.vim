@@ -118,17 +118,6 @@ let @t = ":pop"
 " Search
 map <leader>g     :Ggrep <C-R><C-W><CR>
 
-" ----- Mousewheel in Xterm
-"
-" map <M-Esc>[62~ <MouseDown>
-" map! <M-Esc>[62~ <MouseDown>
-" map <M-Esc>[63~ <MouseUp>
-" map! <M-Esc>[63~ <MouseUp>
-" map <M-Esc>[64~ <S-MouseDown>
-" map! <M-Esc>[64~ <S-MouseDown>
-" map <M-Esc>[65~ <S-MouseUp>
-" map! <M-Esc>[65~ <S-MouseUp>
-
 " Forgot to open as root?
 command! Wsudo  :w !sudo tee > /dev/null %
 
@@ -237,13 +226,9 @@ Plug 'honza/dockerfile.vim', { 'for': 'docker' }
 Plug 'JulesWang/css.vim', { 'for': 'css' }
 Plug 'othree/html5.vim', { 'for': 'html' }
 Plug 'mitsuhiko/vim-python-combined', { 'for': 'python' }
-Plug 'vim-scripts/R.vim', { 'for': 'r' }
 
 " Git
 Plug 'vim-scripts/fugitive.vim'
-
-" Latexsuite = vim-latex
-Plug 'vim-latex/vim-latex', { 'for': 'tex' }
 
 call plug#end()
 
@@ -285,11 +270,15 @@ augroup END
 " Vim Rooter
 let g:rooter_patterns = [ 'package.json', 'README.md', 'Rakefile', '.git', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/' ]
 
+let g:neomake_ruby_rubocop_maker = {
+            \ 'args': ['-D', '-R', '--format', 'emacs', '--fail-level', 'F'],
+        \ 'errorformat': '%f:%l:%c: %t: %m',
+        \ 'postprocess': function('neomake#makers#ft#ruby#RubocopEntryProcess')
+        \ }
+let g:neomake_ruby_enabled_makers = ['rubocop']
+
 " ----- Filetype Specific Settings
 "
-"autocmd FileType csv          set nofoldenable
-"autocmd FileType xml          let g:xml_syntax_folding = 1
-autocmd FileType c            set omnifunc=ccomplete#Complete ts=2 sw=2 cindent
 autocmd FileType css          set omnifunc=csscomplete#CompleteCSS
 autocmd FileType eruby        map _rw i<%= %>
 autocmd FileType eruby        set ts=2 sw=2 number
@@ -299,19 +288,13 @@ autocmd FileType html         set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType java         set foldmethod=manual
 autocmd FileType javascript   set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType lua          set ts=4 sw=4 et smartindent foldmethod=syntax
-autocmd FileType nfo          edit ++enc=cp437
-autocmd FileType perl         source $HOME/.config/nvim/config/filetype_perl.vim
-autocmd FileType php          set omnifunc=phpcomplete#CompletePHP
-autocmd FileType plaintex     source $HOME/.config/nvim/config/filetype_tex.vim
 autocmd FileType python       set omnifunc=pythoncomplete#Complete
-autocmd FileType ruby         source $HOME/.config/nvim/config/filetype_ruby.vim
+autocmd FileType ruby         set number foldmethod=manual ts=2 sw=2
 autocmd FileType ruby,eruby   let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby   let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby   let g:rubycomplete_rails = 1
 autocmd FileType vim          set ts=4 sw=4
 autocmd FileType xml          set omnifunc=xmlcomplete#CompleteTags ts=4 sw=4
-autocmd FileType xwt          set ts=2 sw=2 foldmethod=syntax
-autocmd FileType zsh          set ts=4 sw=4 et
 
 " strip trailing whitespace
 autocmd FileType vim,ruby,yaml,haml,css,html,eruby,coffee,javascript,markdown,sh autocmd BufWritePre <buffer> :%s/\s\+$//e
