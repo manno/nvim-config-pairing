@@ -188,7 +188,7 @@ Plug 'endel/vim-github-colorscheme'
 "Plug 'chriskempson/vim-tomorrow-theme'
 
 " Ctags support
-Plug 'szw/vim-tags'
+Plug 'manno/vim-tags'
 Plug 'majutsushi/tagbar'
 
 " Tmux integration
@@ -205,7 +205,7 @@ Plug 'tpope/vim-surround'
 " gem install gem-ctags
 Plug 'tpope/vim-bundler', { 'for': 'ruby' }
 Plug 'tpope/vim-rake', { 'for': 'ruby' }
-Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'janko-m/vim-test'
 
@@ -269,7 +269,7 @@ augroup QFix
 augroup END
 
 " Vim Rooter
-let g:rooter_patterns = [ 'package.json', 'README.md', 'Rakefile', '.git', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/' ]
+let g:rooter_patterns = [ 'Gemfile', 'package.json', 'README.md', 'Rakefile', '.git', '.git/', '_darcs/', '.hg/', '.bzr/', '.svn/' ]
 
 let g:neomake_ruby_rubocop_maker = {
             \ 'args': ['-D', '-R', '--format', 'emacs', '--fail-level', 'F'],
