@@ -113,9 +113,6 @@ map   <F6>      :command
 " Make
 map !ma       <ESC>:w<CR>:make<CR>
 
-" Since ctrl-t is bound to commandt / unite / fzf
-let @t = ":pop"
-
 " Search
 map <leader>g     :Ggrep <C-R><C-W><CR>
 
