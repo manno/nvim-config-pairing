@@ -146,6 +146,9 @@ call plug#begin('~/.config/nvim/plugged')
 " Nerd
 Plug 'vim-scripts/The-NERD-Commenter'
 
+" Nerdtree
+Plug 'scrooloose/nerdtree'
+
 " Grep
 "Plug 'vim-scripts/grep.vim'
 Plug 'manno/grep'

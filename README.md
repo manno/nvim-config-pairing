@@ -80,6 +80,7 @@ _rw            i<%= %>
 * manno/vim-tags
 * nsf/gocode
 * roxma/nvim-completion-manager
+* scrooloose/nerdtree
 * tpope/vim-surround
 * vim-scripts/Align
 * vim-scripts/SQLUtilities
