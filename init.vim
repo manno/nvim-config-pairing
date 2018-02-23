@@ -165,6 +165,7 @@ Plug 'vim-scripts/vim-airline'
 "Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
+Plug 'scrooloose/nerdtree'
 
 "Plug 'Shougo/neocomplete.vim'
 "Plug 'Shougo/neocomplcache.vim'
@@ -186,6 +187,7 @@ Plug 'jonathanfilip/vim-lucius'
 "Plug 'noahfrederick/vim-hemisu'
 Plug 'endel/vim-github-colorscheme'
 "Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'iCyMind/NeoSolarized'
 
 " Ctags support
 Plug 'manno/vim-tags'
@@ -258,7 +260,7 @@ set diffopt+=vertical
 let g:airline#extensions#tabline#enabled = 1
 "let g:airline_powerline_fonts = 1
 let g:airline_theme='lucius'
-let g:airline#extensions#branch#enabled = 0
+let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tmuxline#enabled = 1
 let airline#extensions#tmuxline#snapshot_file = "~/.tmux.airline.conf"
 
@@ -301,7 +303,7 @@ autocmd FileType xml          set omnifunc=xmlcomplete#CompleteTags ts=4 sw=4
 autocmd FileType vim,ruby,yaml,haml,css,html,eruby,coffee,javascript,markdown,sh autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 " ----- Colorschemes
-colorscheme github
+colorscheme NeoSolarized
 
 " ----- NERDCommenter
 let NERDSpaceDelims = 1
@@ -315,3 +317,4 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
+nnoremap <leader>nt :NERDTreeToggle<CR>

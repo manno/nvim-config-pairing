@@ -93,6 +93,7 @@ _rw            i<%= %>
 * endel/vim-github-colorscheme
 * jonathanfilip/vim-lucius
 * vim-scripts/vim-airline
+* iCyMind/NeoSolarized
 
 ## Ruby
 
