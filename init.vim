@@ -168,6 +168,7 @@ Plug 'vim-scripts/vim-airline'
 "Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
+Plug 'scrooloose/nerdtree'
 
 "Plug 'Shougo/neocomplete.vim'
 "Plug 'Shougo/neocomplcache.vim'
@@ -262,7 +263,7 @@ set diffopt+=vertical
 let g:airline#extensions#tabline#enabled = 1
 "let g:airline_powerline_fonts = 1
 let g:airline_theme='lucius'
-let g:airline#extensions#branch#enabled = 0
+let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tmuxline#enabled = 1
 let airline#extensions#tmuxline#snapshot_file = "~/.tmux.airline.conf"
 
@@ -320,3 +321,4 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
+nnoremap <leader>nt :NERDTreeToggle<CR>
