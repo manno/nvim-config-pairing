@@ -116,6 +116,9 @@ map !ma       <ESC>:w<CR>:make<CR>
 " Search
 map <leader>g     :Ggrep <C-R><C-W><CR>
 
+" Nerdtree
+nnoremap <leader>nt :NERDTreeToggle<CR>
+
 " Forgot to open as root?
 command! Wsudo  :w !sudo tee > /dev/null %
 

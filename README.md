@@ -34,6 +34,7 @@ Default `<leader>` is `\`
 <C-p>          :bp<CR>
 <leader>n      :tabnext<CR>
 <leader>p      :tabprev<CR>
+<leader>nt     :NERDTree
 ```
 
 ## Terminal
