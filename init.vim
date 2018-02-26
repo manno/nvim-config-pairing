@@ -189,6 +189,7 @@ Plug 'jonathanfilip/vim-lucius'
 "Plug 'noahfrederick/vim-hemisu'
 Plug 'endel/vim-github-colorscheme'
 "Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'iCyMind/NeoSolarized'
 
 " Ctags support
 Plug 'manno/vim-tags'
@@ -304,7 +305,8 @@ autocmd FileType xml          set omnifunc=xmlcomplete#CompleteTags ts=4 sw=4
 autocmd FileType vim,ruby,yaml,haml,css,html,eruby,coffee,javascript,markdown,sh autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 " ----- Colorschemes
-colorscheme github
+" colorscheme github
+colorscheme NeoSolarized
 
 " ----- NERDCommenter
 let NERDSpaceDelims = 1
