@@ -232,6 +232,7 @@ Plug 'honza/dockerfile.vim', { 'for': 'docker' }
 Plug 'JulesWang/css.vim', { 'for': 'css' }
 Plug 'othree/html5.vim', { 'for': 'html' }
 Plug 'mitsuhiko/vim-python-combined', { 'for': 'python' }
+Plug 'davinche/godown-vim', { 'for': 'markdown' }
 
 " Git
 Plug 'vim-scripts/fugitive.vim'

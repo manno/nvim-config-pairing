@@ -87,6 +87,7 @@ _rw            i<%= %>
 * vim-scripts/SQLUtilities
 * vim-scripts/The-NERD-Commenter
 * vim-scripts/fugitive.vim
+* davinche/godown-vim
 
 ## Appearance and Colorschemes
 
