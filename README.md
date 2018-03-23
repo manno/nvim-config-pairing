@@ -15,35 +15,26 @@ This config
 * `:Wsudo` - sudo and write file
 * `:Tidy` - try to run tidy for HTML
 
-# Additional Keys
+# Custom Keybindings
 
 Default `<leader>` is `\`
 
 ## Navigation
 
 ```
-<leader>b      :Buffers<CR>
-<leader>g      :Ggrep <C-R><C-W><CR>
-<leader>t      :GitFiles<CR>
-<leader>w      <ESC>:bw<CR>
-<A-h>          <C-w>h
-<A-j>          <C-w>j
-<A-k>          <C-w>k
-<A-l>          <C-w>l
-<C-n>          :bn<CR>
-<C-p>          :bp<CR>
-<leader>n      :tabnext<CR>
-<leader>p      :tabprev<CR>
-<leader>nt     :NERDTree
-```
-
-## Terminal
-
-```
-<A-h>          <C-\><C-n><C-w>h
-<A-j>          <C-\><C-n><C-w>j
-<A-k>          <C-\><C-n><C-w>k
-<A-l>          <C-\><C-n><C-w>l
+<leader>b      :Buffers<CR>               switch buffer             [fzf]
+<leader>g      :Ggrep <C-R><C-W><CR>      git grep word             [grep]
+<leader>t      :GitFiles<CR>              open file                 [fzf]
+<leader>w      <ESC>:bw<CR>               close buffer
+<A-h>          <C-w>h                     navigate splits
+<A-j>          <C-w>j                     navigate splits
+<A-k>          <C-w>k                     navigate splits
+<A-l>          <C-w>l                     navigate splits
+<C-n>          :bn<CR>                    next buffer
+<C-p>          :bp<CR>                    prev buffer
+<leader>n      :tabnext<CR>               next tab
+<leader>p      :tabprev<CR>               prev tab
+<leader>nt     :NERDTree                  open NERDTree             [nerdtree]
 ```
 
 ## Spell checker
@@ -57,10 +48,10 @@ Default `<leader>` is `\`
 ## Misc
 
 ```
-<F3>           :TestFile<CR>
-<F4>           :GoImports<CR>
+<F3>           :TestFile<CR>                                        [vim-test]
+<F4>           :GoImports<CR>                                       [vim-go]
 <F5>           pastetoggle (should not be necessary)
-<F5>           :TagbarToggle<CR>
+<F5>           :TagbarToggle<CR>                                    [tagbar]
 <F6>           :command
 _th            :source $VIMRUNTIME/syntax/2html.vim
 _tt            :source $VIMRUNTIME/syntax/2tex.vim
@@ -71,23 +62,23 @@ _rw            i<%= %>
 
 # Plugins
 
-* airblade/vim-rooter
-* benekastah/neomake
-* fatih/vim-go
-* junegunn/fzf
-* majutsushi/tagbar
-* manno/file-line
-* manno/grep
-* manno/vim-tags
-* nsf/gocode
-* roxma/nvim-completion-manager
-* scrooloose/nerdtree
-* tpope/vim-surround
-* vim-scripts/Align
-* vim-scripts/SQLUtilities
-* vim-scripts/The-NERD-Commenter
-* vim-scripts/fugitive.vim
-* davinche/godown-vim
+* airblade/vim-rooter             - change working dir to project root
+* benekastah/neomake              - asynchronously run programs, like rubocop
+* davinche/godown-vim             - Markdown support
+* fatih/vim-go                    - Go support
+* junegunn/fzf                    - fuzzy find
+* majutsushi/tagbar               - class outline viewer
+* manno/file-line                 - allows to open file:line
+* manno/grep                      - git grep support
+* manno/vim-tags                  - ctags generator: `TagsGenerate!`
+* nsf/gocode                      - autocompletion for Go
+* roxma/nvim-completion-manager   - async keyword completion
+* scrooloose/nerdtree             - file system explorer
+* tpope/vim-surround              - is all about "surroundings": `ysiw'`
+* vim-scripts/Align               - align text
+* vim-scripts/SQLUtilitiesa       - format SQL
+* vim-scripts/The-NERD-Commenter  - comment code
+* vim-scripts/fugitive.vim        - Git support
 
 ## Appearance and Colorschemes
 
@@ -104,7 +95,7 @@ _rw            i<%= %>
 * tpope/vim-rails
 * tpope/vim-rake
 
-## From Polyglot Plugin
+## Language Support From Polyglot Plugin
 
 * JulesWang/css.vim
 * honza/dockerfile.vim
