@@ -177,7 +177,10 @@ Plug 'scrooloose/nerdtree'
 " endfunction
 " Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 
-Plug 'roxma/nvim-completion-manager', { 'do': 'pip3 install --user neovim jedi mistune psutil setproctitle' }
+if has('python3')
+  Plug 'roxma/nvim-completion-manager', { 'do': 'pip3 install --user neovim jedi mistune psutil setproctitle' }
+endif
+
 Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 
 " Syntax errors
