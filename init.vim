@@ -312,6 +312,10 @@ autocmd FileType vim,ruby,yaml,haml,css,html,eruby,coffee,javascript,markdown,sh
 " ----- Colorschemes
 " colorscheme github
 colorscheme NeoSolarized
+set background=light
+if($VISTYLE=='dark')
+    set background=dark
+endif
 
 " ----- NERDCommenter
 let NERDSpaceDelims = 1
