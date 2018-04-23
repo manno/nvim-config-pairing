@@ -149,9 +149,6 @@ call plug#begin('~/.config/nvim/plugged')
 " Nerd
 Plug 'vim-scripts/The-NERD-Commenter'
 
-" Nerdtree
-Plug 'scrooloose/nerdtree'
-
 " Grep
 "Plug 'vim-scripts/grep.vim'
 Plug 'manno/grep'
@@ -270,6 +267,9 @@ let g:airline_theme='lucius'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tmuxline#enabled = 1
 let airline#extensions#tmuxline#snapshot_file = "~/.tmux.airline.conf"
+
+let g:neomake_warning_sign={'text': '!', 'texthl': 'NeomakeErrorMsg'}
+
 
 " don't show quickfix in buffer list
 augroup QFix
