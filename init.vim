@@ -203,8 +203,8 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'vim-scripts/SQLUtilities'
 Plug 'vim-scripts/Align'
 
-" Surround - yse' veS'
-Plug 'tpope/vim-surround'
+" Surround - sa$' srb" sd"
+Plug 'machakann/vim-sandwich'
 
 " Vim ruby
 " gem install gem-ctags
@@ -236,6 +236,7 @@ Plug 'davinche/godown-vim', { 'for': 'markdown' }
 
 " Git
 Plug 'vim-scripts/fugitive.vim'
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
