@@ -206,6 +206,9 @@ Plug 'vim-scripts/Align'
 " Surround - sa$' srb" sd"
 Plug 'machakann/vim-sandwich'
 
+" Multi cursor support
+Plug 'terryma/vim-multiple-cursors'
+
 " Vim ruby
 " gem install gem-ctags
 Plug 'tpope/vim-bundler', { 'for': 'ruby' }
