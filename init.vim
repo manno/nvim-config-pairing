@@ -201,6 +201,7 @@ Plug 'vim-scripts/Align'
 Plug 'machakann/vim-sandwich'
 
 " Multi cursor support
+let g:multi_cursor_use_default_mapping=0
 Plug 'terryma/vim-multiple-cursors'
 
 " Vim ruby
@@ -318,6 +319,20 @@ endif
 " ----- NERDCommenter
 let NERDSpaceDelims = 1
 
+" ----- Multi-cursor
+" remapping multi-cursor to CTRL+l
+let g:multi_cursor_start_word_key      = '<C-l>'
+let g:multi_cursor_select_all_word_key = '<A-l>'
+let g:multi_cursor_start_key           = 'g<C-l>'
+let g:multi_cursor_select_all_key      = 'g<A-l>'
+let g:multi_cursor_next_key            = '<C-l>'
+let g:multi_cursor_prev_key            = '<C-h>'
+let g:multi_cursor_skip_key            = '<C-x>'
+let g:multi_cursor_quit_key            = '<Esc>'
+
+" ----- NerdTree
+nnoremap <leader>nt :NERDTreeToggle<CR>
+nnoremap <leader>nf :NERDTreeFind<CR>
 " ----- Terminal
 tnoremap <A-h> <C-\><C-n><C-w>h
 tnoremap <A-j> <C-\><C-n><C-w>j
@@ -327,4 +342,3 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
-nnoremap <leader>nt :NERDTreeToggle<CR>
