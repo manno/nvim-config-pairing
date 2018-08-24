@@ -201,7 +201,6 @@ Plug 'vim-scripts/Align'
 Plug 'machakann/vim-sandwich'
 
 " Multi cursor support
-let g:multi_cursor_use_default_mapping=0
 Plug 'terryma/vim-multiple-cursors'
 
 " Vim ruby
@@ -312,15 +311,13 @@ autocmd FileType vim,ruby,yaml,haml,css,html,eruby,coffee,javascript,markdown,sh
 " colorscheme github
 colorscheme NeoSolarized
 set background=light
-if($VISTYLE=='dark')
-    set background=dark
-endif
 
 " ----- NERDCommenter
 let NERDSpaceDelims = 1
 
 " ----- Multi-cursor
 " remapping multi-cursor to CTRL+l
+let g:multi_cursor_use_default_mapping=0
 let g:multi_cursor_start_word_key      = '<C-l>'
 let g:multi_cursor_select_all_word_key = '<A-l>'
 let g:multi_cursor_start_key           = 'g<C-l>'
@@ -333,6 +330,7 @@ let g:multi_cursor_quit_key            = '<Esc>'
 " ----- NerdTree
 nnoremap <leader>nt :NERDTreeToggle<CR>
 nnoremap <leader>nf :NERDTreeFind<CR>
+
 " ----- Terminal
 tnoremap <A-h> <C-\><C-n><C-w>h
 tnoremap <A-j> <C-\><C-n><C-w>j
