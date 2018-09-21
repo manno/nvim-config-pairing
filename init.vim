@@ -173,6 +173,7 @@ if has('python3')
 endif
 
 Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
+Plug 'sebdah/vim-delve'
 
 " Syntax errors
 "Plug 'scrooloose/syntastic'
